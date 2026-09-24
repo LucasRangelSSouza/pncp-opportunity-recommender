@@ -1,5 +1,7 @@
 # PNCP opportunity recommender
 
+![Social preview for the PNCP opportunity recommender](docs/assets/social-preview.png)
+
 A transparent retrieval and ranking reference for procurement opportunities. It accepts an organization-level profile and returns open opportunities with the matching terms, modality, location constraints, and official source link that produced each rank.
 
 ```mermaid
