@@ -28,7 +28,7 @@ The project currently uses only synthetic fixtures. A future integration must us
 
 ## Evaluation
 
-The offline evaluator reports Recall and MRR from a labeled relevance set. Fixture tests cover deterministic ranks, constraint filtering, organization-only profile validation, and metric calculation. A broader benchmark must be created from documented public records before reporting quality claims.
+The offline evaluator reports Recall, MRR, and binary nDCG from a labeled relevance set. Fixture tests cover deterministic ranks, constraint filtering, organization-only profile validation, and metric calculation. A broader benchmark must be created from documented public records before reporting quality claims.
 
 ## Status
 

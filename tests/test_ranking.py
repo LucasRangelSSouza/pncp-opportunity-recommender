@@ -24,7 +24,12 @@ class RankingTests(unittest.TestCase):
 
     def test_offline_metrics_are_computed(self):
         metrics = evaluate_rankings({"q": ["a", "b"]}, {"q": {"a"}})
-        self.assertEqual(metrics, {"recall_at_all": 1.0, "mrr": 1.0})
+        self.assertEqual(metrics, {"recall_at_all": 1.0, "mrr": 1.0, "ndcg_at_all": 1.0})
+
+    def test_ndcg_penalizes_late_relevant_results(self):
+        metrics = evaluate_rankings({"q": ["b", "a"]}, {"q": {"a"}})
+        self.assertEqual(metrics["mrr"], 0.5)
+        self.assertEqual(metrics["ndcg_at_all"], 0.63093)
 
 
 if __name__ == "__main__":

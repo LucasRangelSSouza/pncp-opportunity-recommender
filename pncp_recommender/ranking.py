@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 from datetime import date
+from math import log2
 import re
 from typing import Any
 
@@ -52,9 +53,17 @@ def rank_opportunities(profile: dict[str, Any], opportunities: list[dict[str, An
 def evaluate_rankings(ranked_by_query: dict[str, list[str]], relevant_by_query: dict[str, set[str]]) -> dict[str, float]:
     recalls: list[float] = []
     reciprocal_ranks: list[float] = []
+    normalized_discounted_gains: list[float] = []
     for query, relevant in relevant_by_query.items():
         ranked = ranked_by_query.get(query, [])
         hits = [index for index, item in enumerate(ranked, start=1) if item in relevant]
         recalls.append(len(set(ranked) & relevant) / len(relevant) if relevant else 1.0)
         reciprocal_ranks.append(1 / hits[0] if hits else 0.0)
-    return {"recall_at_all": round(sum(recalls) / len(recalls), 6), "mrr": round(sum(reciprocal_ranks) / len(reciprocal_ranks), 6)}
+        discounted_gain = sum(1 / log2(index + 1) for index, item in enumerate(ranked, start=1) if item in relevant)
+        ideal_gain = sum(1 / log2(index + 1) for index in range(1, min(len(relevant), len(ranked)) + 1))
+        normalized_discounted_gains.append(discounted_gain / ideal_gain if ideal_gain else 1.0)
+    return {
+        "recall_at_all": round(sum(recalls) / len(recalls), 6),
+        "mrr": round(sum(reciprocal_ranks) / len(reciprocal_ranks), 6),
+        "ndcg_at_all": round(sum(normalized_discounted_gains) / len(normalized_discounted_gains), 6),
+    }
