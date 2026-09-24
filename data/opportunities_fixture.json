@@ -1,0 +1,5 @@
+[
+  {"id":"o-1","item":"A4 office paper and printing supplies","status":"open","deadline":"2026-10-10","modality":"pregao","state":"GO","source_record_url":"https://pncp.gov.br/example/o-1"},
+  {"id":"o-2","item":"medical gloves","status":"open","deadline":"2026-10-10","modality":"pregao","state":"GO","source_record_url":"https://pncp.gov.br/example/o-2"},
+  {"id":"o-3","item":"office paper","status":"closed","deadline":"2026-10-10","modality":"pregao","state":"GO","source_record_url":"https://pncp.gov.br/example/o-3"}
+]
