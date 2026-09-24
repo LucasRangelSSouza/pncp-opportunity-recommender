@@ -1,5 +1,7 @@
 # Evaluating a transparent procurement-opportunity ranking system
 
+**Versioned reference:** [v0.1.0](https://github.com/LucasRangelSSouza/pncp-opportunity-recommender/tree/v0.1.0)
+
 A procurement opportunity list becomes misleading when it hides the reason an item appears at the top. This reference implementation keeps the ranking deliberately small. It compares terms from an organization-level category profile with the item description, then adds declared modality and state matches. Every result keeps the terms and constraints that contributed to the score.
 
 The implementation filters out closed opportunities and opportunities whose deadline has passed. It does not silently substitute a similar item when lexical evidence is absent. A locality or modality match can still surface a record for review, but the explanation shows that the item terms did not match.
