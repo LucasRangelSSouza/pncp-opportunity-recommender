@@ -32,4 +32,4 @@ The offline evaluator reports Recall, MRR, and binary nDCG from a labeled releva
 
 ## Status
 
-This is an in-progress implementation. Documentation, model lifecycle, public release controls, and CI will be completed before publication.
+The fixture-first implementation, documentation, release controls, and CI are available now. A pinned public procurement release and a documented benchmark remain prerequisites for any real-data quality claim.
