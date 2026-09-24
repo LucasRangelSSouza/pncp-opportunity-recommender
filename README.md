@@ -18,7 +18,7 @@ The result is a relevance signal. It does not determine supplier eligibility, co
 ## Run locally
 
 ```powershell
-python -m unittest discover -s tests -v
+make check
 python -m pncp_recommender --profile data\profile_fixture.json --opportunities data\opportunities_fixture.json --as-of 2026-09-24 --output artifacts\rankings.json
 ```
 
