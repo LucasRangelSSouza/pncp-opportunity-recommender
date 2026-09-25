@@ -1,0 +1,8 @@
+[
+  {"profile_id": "synthetic-health-supplies", "categories": ["health"], "min_value": 20000, "max_value": 500000, "synthetic": true},
+  {"profile_id": "synthetic-school-materials", "categories": ["education"], "min_value": 10000, "max_value": 300000, "synthetic": true},
+  {"profile_id": "synthetic-it-services", "categories": ["technology"], "min_value": 50000, "max_value": 2000000, "synthetic": true},
+  {"profile_id": "synthetic-civil-works", "categories": ["works_and_maintenance"], "min_value": 200000, "max_value": 5000000, "synthetic": true},
+  {"profile_id": "synthetic-fleet-services", "categories": ["transport"], "min_value": 30000, "max_value": 1000000, "synthetic": true},
+  {"profile_id": "synthetic-health-and-education", "categories": ["health", "education"], "min_value": 5000, "max_value": 150000, "synthetic": true}
+]

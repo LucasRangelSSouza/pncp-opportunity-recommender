@@ -1,7 +1,11 @@
 [project]
 name = "pncp-opportunity-recommender"
-version = "0.1.0"
+version = "0.2.0"
 requires-python = ">=3.10"
+dependencies = ["pyarrow>=15,<22"]
+
+[project.optional-dependencies]
+release = ["kagglehub>=0.3,<2"]
 
 [project.scripts]
 pncp-recommender = "pncp_recommender.__main__:main"
