@@ -5,6 +5,7 @@
 - v0.2.0 ranks historical notices from the pinned Kaggle release `lucasrangelss/brazil-pncp-procurement-history` version 1 (manifest SHA-256 `9301e838…0c66`). The resolver downloads through `kagglehub` and verifies the manifest and every layer before loading ([ADR 0002](docs/adr/0002-pin-release-and-temporal-split.md)).
 - The 2026-09-25 offline evaluation at commit `02bd7d0` used a temporal split (history before 2025-01-06) and six synthetic profiles with rule-derived judgments. Results and hashes: [evidence record](docs/evidence/pncp-release-v1-evaluation-2026-09-25.md). The metrics measure constraint adherence, not user relevance.
 - 22 unit tests pass locally and in CI.
+- On 2026-09-27, two public-download runs produced identical `evaluation.json` and `review_queue.jsonl` hashes after processing 1,979 verified historical records. `make reproduce` now calls Python with `-s` so a globally installed user package cannot shadow the documented release dependency.
 - The original fixture path (lexical overlap, deadline, status, modality, state) remains as `rank-fixture`.
 
 ## Accepted decisions
