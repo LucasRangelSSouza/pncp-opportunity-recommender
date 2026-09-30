@@ -101,9 +101,9 @@ Results are review signals. Every row carries `review_required`, `eligibility_no
 
 Run `make reproduce` twice and compare SHA-256 values of the two output files; at commit `02bd7d0` they were `9bbac855…c037c` and `35beeba0…ab311` ([full record](docs/evidence/pncp-release-v1-evaluation-2026-09-25.md)).
 
-## Article
+## Articles
 
-Article: [Evaluating a transparent procurement-opportunity ranking system](https://medium.com/@lucas.rangel_18599/6d38130214f3) on Medium (source: [articles/transparent-procurement-ranking.md](articles/transparent-procurement-ranking.md)).
+The article draft is in [articles/transparent-procurement-ranking.md](articles/transparent-procurement-ranking.md). It has not been published elsewhere.
 
 ## Roadmap
 
