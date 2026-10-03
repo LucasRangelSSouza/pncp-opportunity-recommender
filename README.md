@@ -109,3 +109,9 @@ The article draft is in [articles/transparent-procurement-ranking.md](articles/t
 
 - Pin a later release that includes deadlines and item descriptions, then enable lexical retrieval on real data.
 - Add supplier-result tables after their identifier review in `brazil-public-data-map`.
+
+<!-- articles:start -->
+## Articles
+
+- [How to evaluate a ranking model without leakage](https://lucas.rangeltech.net/articles/f2-evaluate-ranking-model-without-leakage/)
+<!-- articles:end -->
